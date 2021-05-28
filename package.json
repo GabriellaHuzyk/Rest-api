@@ -1,0 +1,12 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "Teste de rest API nodejs",
+  "main": "index.js",
+  "repository": "https://github.com/GabriellaHuzyk/Rest-api",
+  "author": "Gabriella Huzyk",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

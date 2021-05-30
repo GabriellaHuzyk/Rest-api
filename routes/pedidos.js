@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-//RETORNA todos os produto
+//RETORNA todos os produtos
 router.get("/", (req, res, next) => {
   res.status(200).send({
-    mensagem: "Retorna os produto",
+    mensagem: "Retorna os produtos",
   });
 });
 
@@ -32,7 +32,7 @@ router.get("/:id_pedido", (req, res, next) => {
   //ALTERA um pedido
   router.patch("/", (req, res, next) => {
     res.status(201).send({
-      mensagem: "DAlterando um pedido",
+      mensagem: "Alterando um pedido",
     });
   });
 

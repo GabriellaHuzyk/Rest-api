@@ -6,9 +6,13 @@
   "repository": "https://github.com/GabriellaHuzyk/Rest-api",
   "author": "Gabriella Huzyk",
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "git": "^0.1.5",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.7"
   }
 }

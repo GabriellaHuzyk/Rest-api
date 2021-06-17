@@ -2,13 +2,14 @@ const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const app = express();
+const db = require("./routes/database/db");
 
 app.listen(3006, () => {
   console.log("Servidor rodando na porta 3006...");
 });
 
-const rotaProdutos = require("./routes/produtos");
-const rotaPedidos = require("./routes/pedidos");
+const rotaProdutos = require("./routes/products");
+const rotaPedidos = require("./routes/orders");
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -29,8 +30,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/produtos", rotaProdutos);
-app.use("/pedidos", rotaPedidos);
+app.use("/products", rotaProdutos);
+app.use("/orders", rotaPedidos);
 
 app.use((req, res, next) => {
   const erro = new Error("Não encontrado");
